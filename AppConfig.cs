@@ -8,7 +8,7 @@ public class AppConfig
   public string DefaultVmName { get; set; } = "testvm";
   public string DefaultVmDistro { get; set; } = "Debian11";
   public string DefaultUser { get; set; } = "user";
-  public string DefaultMemorySize { get; set; } = "256MiB";
+  public string DefaultMemorySize { get; set; } = "512MiB";
   public string DefaultDiskSize { get; set; } = "4GiB";
   public int DefaultCpuCount { get; set; } = 1;
 
