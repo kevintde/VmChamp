@@ -1,0 +1,27 @@
+name: ci
+
+on:
+  push:
+
+permissions:
+  id-token: write
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout_repo
+      uses: actions/checkout@v3
+    - name: Install Docker
+      run: curl https://get.docker.com | sudo bash
+    - name: build_release
+      run: bash build.sh
+    - name: upload_binary
+      uses: actions/upload-artifact@v3.1.2
+      with:
+        name: "VmChamp-amd64"
+        path: build/VmChamp
+        retention-days: 3
+
+  
