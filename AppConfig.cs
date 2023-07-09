@@ -6,11 +6,11 @@ public class AppConfig
   public string CacheDir { get; private set; }
   public string DataDir { get; private set; }
   public string DefaultVmName { get; set; } = "testvm";
-  public string DefaultVmDistro { get; set; } = "Debian11";
+  public string DefaultVmDistro { get; set; } = "Debian12";
   public string DefaultUser { get; set; } = "user";
-  public string DefaultMemorySize { get; set; } = "256MiB";
-  public string DefaultDiskSize { get; set; } = "4GiB";
-  public int DefaultCpuCount { get; set; } = 1;
+  public string DefaultMemorySize { get; set; } = "512MiB";
+  public string DefaultDiskSize { get; set; } = "8GiB";
+  public int DefaultCpuCount { get; set; } = 2;
 
   public AppConfig(string appName = "VmChamp", string sessionName = "default")
   {
