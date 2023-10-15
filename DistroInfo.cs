@@ -76,6 +76,16 @@ public class DistroInfo
     },
     new()
     {
+      Name = "Ubuntu2310",
+      Family = "Ubuntu",
+      ImageName = "mantic-server-cloudimg-amd64.img",
+      Url = "https://cloud-images.ubuntu.com/mantic/current/",
+      Aliases = new[] { "Mantic Minotaur", "Mantic" },
+      ChecksumFile = "SHA256SUMS",
+      ChecksumType = "sha256"
+    },
+    new()
+    {
       Name = "Arch",
       Family = "Arch",
       ImageName = "Arch-Linux-x86_64-cloudimg.qcow2",
