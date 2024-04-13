@@ -26,9 +26,9 @@ jobs:
         docker buildx build --build-arg TARGET_VERSION="$TARGET_VERSION" . \
           --target=output --output type=local,dest=/tmp/out/
         cp /tmp/out/VmChamp /tmp/out/VmChamp-linux-${{ github.ref_name }}-amd64
-        sed -i s/"VERSION"/\1${{TARGET_VERSION}}/g PKGBUILD
+        sed -i s/"VERSION"/\1${{$TARGET_VERSION}}/g PKGBUILD
         SHASUM="$(sha512sum /tmp/out/VmChamp | cut -d " " -f 1 )"
-        sed -i s/"SKIP"/\1${{SHASUM}}/g PKGBUILD
+        sed -i s/"SKIP"/\1${{$SHASUM}}/g PKGBUILD
 
     - name: upload_binary
       uses: actions/upload-artifact@v3.1.3
